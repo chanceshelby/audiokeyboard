@@ -1,0 +1,839 @@
+<style>
+	button {
+		background-color: #141414;
+		color: #fff;
+		width:45px;
+		height:45px;
+		border: solid #141414;
+		border-radius: 5px;
+		font-size: 20px;
+	}
+	#keyboard {
+		background-color:rgb(0,0,0);background-image:url(https://www.zingerbug.com/Backgrounds/background_images/indigo_textured_rock_seamless_pattern.jpg);background-position:top left;background-repeat:repeat;background-attachment:fixed;
+		width:70%;
+		border: 2px solid #000;
+		padding: 20px;
+		border-radius:15px;
+	}
+	#btnTAB {
+		width:80px;
+	}
+	#btnCAPSLOCK {
+		width: 140px;
+	}
+	#btnENTER {
+		width: 100px;
+	}
+	#btnSHIFT {
+		width: 100px;
+	}
+	#btnSHIFT2 {
+		width: 100px;
+	}
+	#btnCOMMA {
+		width:55px;
+	}
+	#btnDOT {
+		width:45px;
+	}
+	#btnSLASH {
+		width:45px;
+	}
+	#btnCTRL {
+		width:70px;
+	}
+	#btnALT {
+		width:50px;
+	}
+	#btnCTRL2 {
+		width:70px;
+	}
+	#btnALT2 {
+		width:50px;
+	}
+	#btnSPACE {
+		width:300px;
+	}
+	#btnEQUAL {
+		width:48px;
+	}
+	#btnDELETE {
+		width:90px;
+	}
+	body {
+	    background: url(bg1.jpg) no-repeat center center fixed; 
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	  }
+	}
+</style>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #141414;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: transparent;
+  color: white;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #141414;
+   color: white;
+   text-align: center;
+}
+</style>
+</head>
+<title>Audio Keyboard</title>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home" style="font-size:24px;margin: 0px 160px">Audio <font color="#ffed4b">Keyboard</a></font>
+  <!--<a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+	  -->
+</div>
+
+<br><br><br><br>
+	
+	<center>
+	
+	<div id="keyboard">
+	<button id="btnSWIGGLE">` <font color="grey">~</button></font>
+	<button id="btn1">1</button>
+	<button id="btn2">2</button>
+	<button id="btn3">3</button>
+	<button id="btn4">4</button>
+	<button id="btn5">5</button>
+	<button id="btn6">6</button>
+	<button id="btn7">7</button>
+	<button id="btn8">8</button>
+	<button id="btn9">9</button>
+	<button id="btn0">0</button>
+	<button id="btnHYPHEN">- <font color="grey">_</button></font>
+	<button id="btnEQUAL" style="width:53px">= <font color="grey">+</button></font>
+	<button id="btnDELETE">DELETE</button>
+	<br><br>
+	<button id="btnTAB">TAB</button>
+	<button id="btnQ">Q</button>
+	<button id="btnW">W</button>
+	<button id="btnE">E</button>
+	<button id="btnR">R</button>
+	<button id="btnT">T</button>
+	<button id="btnY">Y</button>
+	<button id="btnU">U</button>
+	<button id="btnI">I</button>
+	<button id="btnO">O</button>
+	<button id="btnP">P</button>
+	<button id="btnBRAKET1">[ <font color="grey">{</button></font>
+	<button id="btnBRAKET2">] <font color="grey">}</button></font>
+	<button id="btnBACKSLASH">\ <font color="grey">|</button></font>
+	<br><br>
+	<button id="btnCAPSLOCK">CAPS LOCK</button>
+	<button id="btnA">A</button>
+	<button id="btnS">S</button>
+	<button id="btnD">D</button>
+	<button id="btnF">F</button>
+	<button id="btnG">G</button>
+	<button id="btnH">H</button>
+	<button id="btnJ">J</button>
+	<button id="btnK">K</button>
+	<button id="btnL">L</button>
+	<button id="btnSEMICOLON">; <font color="grey">:</button></font>
+	<button id="btnQUOTE">' <font color="grey">"</button></font>
+	<button id="btnENTER">ENTER</button>
+	<br><br>
+	<button id="btnSHIFT">SHIFT</button>
+	<button id="btnZ">Z</button>
+	<button id="btnX">X</button>
+	<button id="btnC">C</button>
+	<button id="btnV">V</button>
+	<button id="btnB">B</button>
+	<button id="btnN">N</button>
+	<button id="btnM">M</button>
+	<button id="btnCOMMA" style="width:45px">, <font color="grey"><</button></font>
+	<button id="btnDOT" style="width:45px">. <font color="grey">></button></font>
+	<button id="btnSLASH" style="width:45px">/ <font color="grey">?</button></font>
+	<button id="btnSHIFT2">SHIFT</button>
+	<br><br>
+	<button id="btnALT">ALT</button>
+	<button id="btnCTRL">CTRL</button>
+	<button id="btnSPACE">SPACE</button>
+	<button id="btnCTRL2">CTRL</button>
+	<button id="btnALT2">ALT</button><br>
+	<small style="float:left;">CM 1920</small>
+	
+	<audio id="audioQ" controls style="display:none">
+	  <source src="BOOMIN CLASSIC TRAP HOUSE SNARE 1.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioW" controls style="display:none">
+	  <source src="BOI1DA_clap_10.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioE" controls style="display:none">
+	  <source src="BOI1DA_percussion_03.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioR" controls style="display:none">
+	  <source src="ESM_Character_Kimberly_What_1_Female_DJ_Teen_Young_Girl.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioT" controls style="display:none">
+	  <source src="KidsYeah_S011HU.17.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioY" controls style="display:none">
+	  <source src="SONNY_D_kick_01.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioU" controls style="display:none">
+	  <source src="clap-808.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioI" controls style="display:none">
+	  <source src="CYCdh_ElecK01-Kick02.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="audioO" controls style="display:none">
+	  <source src="clap-analog.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioP" controls style="display:none">
+	  <source src="clap-crushed.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioA" controls style="display:none">
+	  <source src="clap-fat.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioS" controls style="display:none">
+	  <source src="clap-slapper.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioD" controls style="display:none">
+	  <source src="clap-tape.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioF" controls style="display:none">
+	  <source src="cowbell-808.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioG" controls style="display:none">
+	  <source src="crash-acoustic.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioH" controls style="display:none">
+	  <source src="crash-noise.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioJ" controls style="display:none">
+	  <source src="crash-tape.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioK" controls style="display:none">
+	  <source src="hihat-808.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioL" controls style="display:none">
+	  <source src="hihat-acoustic01.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioZ" controls style="display:none">
+	  <source src="hihat-acoustic02.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioX" controls style="display:none">
+	  <source src="hihat-analog.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioC" controls style="display:none">
+	  <source src="hihat-digital.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioV" controls style="display:none">
+	  <source src="hihat-dist01.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioB" controls style="display:none">
+	  <source src="CYCdh_K4-Snr05.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="audioN" controls style="display:none">
+	  <source src="hihat-dist02.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioM" controls style="display:none">
+	  <source src="hihat-electro.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioENTER" controls style="display:none">
+	  <source src="kick-acoustic01.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioCTRL" controls style="display:none">
+	  <source src="kick-big.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioALT" controls style="display:none">
+	  <source src="kick-cultivator.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioCTRL2" controls style="display:none">
+	  <source src="kick-big.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioALT2" controls style="display:none">
+	  <source src="kick-cultivator.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioSHIFT" controls style="display:none">
+	  <source src="kick-tight.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioHYPHEN" controls style="display:none">
+	  <source src="kick-electro01.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioEQUAL" controls style="display:none">
+	  <source src="kick-floppy.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioSEMICOLON" controls style="display:none">
+	  <source src="kick-heavy.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioBRACKET1" controls style="display:none">
+	  <source src="kick-newwave.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioBRACKET2" controls style="display:none">
+	  <source src="kick-thump.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioDELETE" controls style="display:none">
+	  <source src="shaker-shuffle.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioSWIGGLE" controls style="display:none">
+	  <source src="shaker-suckup.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioTAB" controls style="display:none">
+	  <source src="snare-808.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioCAPSLOCK" controls style="display:none">
+	  <source src="snare-big.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioCOMMA" controls style="display:none">
+	  <source src="snare-punch.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioDOT" controls style="display:none">
+	  <source src="tom-chiptune.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioBACKSLASH" controls style="display:none">
+	  <source src="tom-fm.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioSLASH" controls style="display:none">
+	  <source src="snare-vinyl02.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioQUOTE" controls style="display:none">
+	  <source src="snare-vinyl01.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audioSPACE" controls style="display:none">
+	  <source src="kick-zapper.wav" type="audio/mpeg">
+	</audio>
+	
+	
+	<audio id="audio1" controls style="display:none">
+	  <source src="perc-808.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audio2" controls style="display:none">
+	  <source src="perc-chirpy.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audio3" controls style="display:none">
+	  <source src="perc-hollow.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audio4" controls style="display:none">
+	  <source src="perc-laser.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audio5" controls style="display:none">
+	  <source src="perc-metal.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audio6" controls style="display:none">
+	  <source src="perc-nasty.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audio7" controls style="display:none">
+	  <source src="perc-short.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audio8" controls style="display:none">
+	  <source src="perc-tambo.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audio9" controls style="display:none">
+	  <source src="perc-tribal.wav" type="audio/mpeg">
+	</audio>
+	<audio id="audio0" controls style="display:none">
+	  <source src="perc-weirdo.wav" type="audio/mpeg">
+	</audio>
+	<!-- FN SOUNDS -->
+	<audio loop id="FN1" controls style="display:none">
+	  <source src="airdrop to chance.wav" type="audio/mpeg">
+	</audio loop>
+	
+	<script>
+	document.getElementById('btnQ').onclick = function(){
+	document.getElementById('audioQ').play();
+	}
+	document.getElementById('btnW').onclick = function(){
+	document.getElementById('audioW').play();
+	}
+	document.getElementById('btnE').onclick = function(){
+	document.getElementById('audioE').play();
+	}
+	document.getElementById('btnR').onclick = function(){
+	document.getElementById('audioR').play();
+	}
+	document.getElementById('btnT').onclick = function(){
+	document.getElementById('audioT').play();
+	}
+	document.getElementById('btnY').onclick = function(){
+	document.getElementById('audioY').play();
+	}
+	document.getElementById('btnU').onclick = function(){
+	document.getElementById('audioU').play();
+	}
+	document.getElementById('btnI').onclick = function(){
+	document.getElementById('audioI').play();
+	}
+	document.getElementById('btnO').onclick = function(){
+	document.getElementById('audioO').play();
+	}
+	document.getElementById('btnP').onclick = function(){
+	document.getElementById('audioP').play();
+	}
+	document.getElementById('btnA').onclick = function(){
+	document.getElementById('audioA').play();
+	}
+	document.getElementById('btnS').onclick = function(){
+	document.getElementById('audioS').play();
+	}
+	document.getElementById('btnD').onclick = function(){
+	document.getElementById('audioD').play();
+	}
+	document.getElementById('btnF').onclick = function(){
+	document.getElementById('audioF').play();
+	}
+	document.getElementById('btnG').onclick = function(){
+	document.getElementById('audioG').play();
+	}
+	document.getElementById('btnH').onclick = function(){
+	document.getElementById('audioH').play();
+	}
+	document.getElementById('btnJ').onclick = function(){
+	document.getElementById('audioJ').play();
+	}
+	document.getElementById('btnK').onclick = function(){
+	document.getElementById('audioK').play();
+	}
+	document.getElementById('btnL').onclick = function(){
+	document.getElementById('audioL').play();
+	}
+	document.getElementById('btnZ').onclick = function(){
+	document.getElementById('audioZ').play();
+	}
+	document.getElementById('btnX').onclick = function(){
+	document.getElementById('audioX').play();
+	}
+	document.getElementById('btnC').onclick = function(){
+	document.getElementById('audioC').play();
+	}
+	document.getElementById('btnV').onclick = function(){
+	document.getElementById('audioV').play();
+	}
+	document.getElementById('btnB').onclick = function(){
+	document.getElementById('audioB').play();
+	}
+	document.getElementById('btnN').onclick = function(){
+	document.getElementById('audioN').play();
+	}
+	document.getElementById('btnM').onclick = function(){
+	document.getElementById('audioM').play();
+	}
+	document.getElementById('btnDOT').onclick = function(){
+	document.getElementById('audioDOT').play();
+	}
+	document.getElementById('btnBACKSLASH').onclick = function(){
+	document.getElementById('audioBACKSLASH').play();
+	}
+	</script>
+	<script>
+	document.getElementById('btnENTER').onclick = function(){
+	document.getElementById('audioENTER').play();
+	}
+	document.getElementById('btnCTRL').onclick = function(){
+	document.getElementById('audioCTRL').play();
+	}
+	document.getElementById('btnALT').onclick = function(){
+	document.getElementById('audioALT').play();
+	}
+	document.getElementById('btnCTRL2').onclick = function(){
+	document.getElementById('audioCTRL').play();
+	}
+	document.getElementById('btnALT2').onclick = function(){
+	document.getElementById('audioALT').play();
+	}
+	document.getElementById('btnSHIFT').onclick = function(){
+	document.getElementById('audioSHIFT').play();
+	}
+	document.getElementById('btnSHIFT2').onclick = function(){
+	document.getElementById('audioSHIFT').play();
+	}
+	document.getElementById('btnHYPHEN').onclick = function(){
+	document.getElementById('audioHYPHEN').play();
+	}
+	document.getElementById('btnEQUAL').onclick = function(){
+	document.getElementById('audioEQUAL').play();
+	}
+	document.getElementById('btnSEMICOLON').onclick = function(){
+	document.getElementById('audioSEMICOLON').play();
+	}
+	document.getElementById('btnCAPSLOCK').onclick = function(){
+	document.getElementById('audioCAPSLOCK').play();
+	}
+	document.getElementById('btnSLASH').onclick = function(){
+	document.getElementById('audioSLASH').play();
+	}
+	document.getElementById('btnDELETE').onclick = function(){
+	document.getElementById('audioDELETE').play();
+	}
+	document.getElementById('btnSWIGGLE').onclick = function(){
+	document.getElementById('audioSWIGGLE').play();
+	}
+	document.getElementById('btnTAB').onclick = function(){
+	document.getElementById('audioTAB').play();
+	}
+	document.getElementById('btn1').onclick = function(){
+	document.getElementById('audio1').play();
+	}
+	document.getElementById('btn2').onclick = function(){
+	document.getElementById('audio2').play();
+	}
+	document.getElementById('btn3').onclick = function(){
+	document.getElementById('audio3').play();
+	}
+	document.getElementById('btn4').onclick = function(){
+	document.getElementById('audio4').play();
+	}
+	document.getElementById('btn5').onclick = function(){
+	document.getElementById('audio5').play();
+	}
+	document.getElementById('btn6').onclick = function(){
+	document.getElementById('audio6').play();
+	}
+	document.getElementById('btn7').onclick = function(){
+	document.getElementById('audio7').play();
+	}
+	document.getElementById('btn8').onclick = function(){
+	document.getElementById('audio8').play();
+	}
+	document.getElementById('btn9').onclick = function(){
+	document.getElementById('audio9').play();
+	}
+	document.getElementById('btn0').onclick = function(){
+	document.getElementById('audio0').play();
+	}
+	document.getElementById('btnCOMMA').onclick = function(){
+	document.getElementById('audioCOMMA').play();
+	}
+	document.getElementById('btnQUOTE').onclick = function(){
+	document.getElementById('audioQUOTE').play();
+	}
+	document.getElementById('btnSPACE').onclick = function(){
+	document.getElementById('audioSPACE').play();
+	}
+	document.getElementById('btnBRAKET1').onclick = function(){
+	document.getElementById('audioBRACKET1').play();
+	}
+	document.getElementById('btnBRAKET2').onclick = function(){
+	document.getElementById('audioBRACKET2').play();
+	}
+	</script>
+	
+	<script>
+		document.addEventListener('keydown', function(e) {
+		  if(e.keyCode == 112){
+		  document.getElementById('FN1').play();
+		  }
+		});
+		
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 81){
+	  document.getElementById('audioQ').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 87){
+	  document.getElementById('audioW').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 69){
+	  document.getElementById('audioE').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 82){
+	  document.getElementById('audioR').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 84){
+	  document.getElementById('audioT').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 89){
+	  document.getElementById('audioY').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 85){
+	  document.getElementById('audioU').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 73){
+	  document.getElementById('audioI').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 79){
+	  document.getElementById('audioO').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 80){
+	  document.getElementById('audioP').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 65){
+	  document.getElementById('audioA').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 83){
+	  document.getElementById('audioS').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 68){
+	  document.getElementById('audioD').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 70){
+	  document.getElementById('audioF').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 71){
+	  document.getElementById('audioG').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 72){
+	  document.getElementById('audioH').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 74){
+	  document.getElementById('audioJ').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 75){
+	  document.getElementById('audioK').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 76){
+	  document.getElementById('audioL').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 90){
+	  document.getElementById('audioZ').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 88){
+	  document.getElementById('audioX').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 67){
+	  document.getElementById('audioC').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 86){
+	  document.getElementById('audioV').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 66){
+	  document.getElementById('audioB').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 78){
+	  document.getElementById('audioN').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 77){
+	  document.getElementById('audioM').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 13){
+	  document.getElementById('audioENTER').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 17){
+	  document.getElementById('audioCTRL').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 18){
+	  document.getElementById('audioALT').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 16){
+	  document.getElementById('audioSHIFT').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 189){
+	  document.getElementById('audioHYPHEN').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 187){
+	  document.getElementById('audioEQUAL').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 186){
+	  document.getElementById('audioSEMICOLON').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 219){
+	  document.getElementById('audioBRACKET1').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 221){
+	  document.getElementById('audioBRACKET2').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 8){
+	  document.getElementById('audioDELETE').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 192){
+	  document.getElementById('audioSWIGGLE').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 9){
+	  document.getElementById('audioTAB').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 20){
+	  document.getElementById('audioCAPSLOCK').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 188){
+	  document.getElementById('audioCOMMA').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 190){
+	  document.getElementById('audioDOT').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 220){
+	  document.getElementById('audioBACKSLASH').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 191){
+	  document.getElementById('audioSLASH').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 222){
+	  document.getElementById('audioQUOTE').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 32){
+	  document.getElementById('audioSPACE').play();
+	  }
+	});
+	
+	
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 48){
+	  document.getElementById('audio0').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 49){
+	  document.getElementById('audio1').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 50){
+	  document.getElementById('audio2').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 51){
+	  document.getElementById('audio3').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 52){
+	  document.getElementById('audio4').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 53){
+	  document.getElementById('audio5').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 54){
+	  document.getElementById('audio6').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 55){
+	  document.getElementById('audio7').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 56){
+	  document.getElementById('audio8').play();
+	  }
+	});
+	document.addEventListener('keydown', function(e) {
+	  if(e.keyCode == 57){
+	  document.getElementById('audio9').play();
+	  }
+	});
+	</script>
+</div>
+	
+	<div class="footer">
+	  <p>Developed by Chance & Mason.</p>
+	</div>
